@@ -5,9 +5,14 @@
     "start": "meteor run"
   },
   "dependencies": {
+    "amazon-reviews-crawler": "https://github.com/adershmanoj/amazon-reviews-crawler/tarball/master",
     "babel-runtime": "^6.26.0",
     "meteor-node-stubs": "^0.3.2",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "vo": "^4.0.2"
+  },
+  "devDependencies": {
+    "electron": "1.7.10"
   }
 }

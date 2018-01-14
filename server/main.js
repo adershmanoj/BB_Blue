@@ -1,5 +1,7 @@
 import { Meteor } from 'meteor/meteor';
+import {Tracker} from 'meteor/tracker';
+
 
 Meteor.startup(() => {
-  // code to run on server at startup
+  reviewData = {};
 });

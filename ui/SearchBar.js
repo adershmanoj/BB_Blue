@@ -2,10 +2,12 @@ import React from 'react';
 import {Session} from 'meteor/session';
 
 export default class SearchBar extends React.Component {
+  
   constructor(props){
     super(props);
     this.state = {
-      error: ''
+      error: '',
+      processing: false
     };
   };
   
@@ -22,6 +24,7 @@ export default class SearchBar extends React.Component {
     //regex check for Amazon url here
     
     Session.set('link', link);
+    this.setState({processing: true}); //show processing message
   };
   
   render(){
@@ -33,6 +36,9 @@ export default class SearchBar extends React.Component {
           <button>Search</button>
         </label>
       </form>
+      <p>
+        {this.state.processing ? "Please wait..fetching results" : undefined}
+      </p>
     </div>
   );
   };

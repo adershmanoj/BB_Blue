@@ -7,17 +7,16 @@ import {Tracker} from 'meteor/tracker';
 import App from '../ui/App';
 
 Meteor.startup(() => {
-  Session.set('link': '');
+  Session.set('link', '');
   Tracker.autorun(() => {
     const link = Session.get('link');
     if(!!link){ // if link is set 
-      processLink(link);
+      Meteor.call('crawler', link);
     }
-    
+  });
+  
+  Tracker.autorun(() => {
     ReactDOM.render(<App/>, document.getElementById('app'));
   });
 });
-
-function processLink(link){
-  const reviews = crawler(link);
-}
+ 
