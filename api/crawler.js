@@ -10,7 +10,7 @@ if(Meteor.isServer){
   
   Meteor.methods({
     'crawler'(link){
-      ReviewDB.remove(reviewData);
+      //ReviewDB.remove(reviewData);
       var linkSplit = link.split('/');
       var reviewsCrawler = require('amazon-reviews-crawler');
       reviewsCrawler(linkSplit[5])
