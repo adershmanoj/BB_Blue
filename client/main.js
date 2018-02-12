@@ -11,7 +11,7 @@ Meteor.startup(() => {
   Tracker.autorun(() => {
     const link = Session.get('link');
     if(!!link){ // if link is set 
-      Meteor.call('crawler', link);
+      Meteor.call('process', link); //call server to process link
     }
   });
   

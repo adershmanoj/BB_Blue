@@ -14,7 +14,7 @@ export default class SearchBar extends React.Component {
   submitSearch(e){
     e.preventDefault();
     const link = e.target.getElementsByTagName('input')[0].value.trim();
-    const regex = /amazon.in\/(?=.*dp\/)/; //regex check for Amazon product url
+    const regex = /(amazon.in|amazon.com)\/(?=.*\/dp\/)/; //regex check for Amazon product url
 		
     if(!regex.test(link)){
       this.setState({
