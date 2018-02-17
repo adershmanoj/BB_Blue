@@ -10,7 +10,7 @@ Meteor.methods({
 	},
 	
 	'tagger'(reviewData){
-		tag("This phone is great");
+		tag(reviewData);
 	}
 });
 

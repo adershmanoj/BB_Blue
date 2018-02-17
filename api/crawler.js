@@ -4,6 +4,7 @@ export default function crawler(link){
 	var linkSplit = link.split('/');
 	var link = linkSplit[2]+'/product-reviews/'+linkSplit[5]; //product reviews page url
 	var reviewsCrawler = require('amazon-reviews-crawler');
+	
 	reviewsCrawler(link)
 		.then(function(results){
 			Meteor.call('tagger', results);
