@@ -10,6 +10,7 @@ export default function crawler(link){
 			Meteor.call('tagger', results);
 		})
 		.catch(function(err){
-			new Meteor.error(err);
+			new Meteor.Error(err);
 		})
 }
+ 

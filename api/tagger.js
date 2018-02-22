@@ -7,15 +7,20 @@ export default function tag(reviewData){
 		emotional.load(function () {
 			sentences = obj.text.split('.'); //split review text into sentence array
 			sentences.forEach(function(sentence){
-				console.log(sentence+": ");
-				console.log(emotional.get(sentence));
+				var analysis = emotional.get(sentence); //subjectivity and polarity analysis
+				
+				words = sentence.split(' '); //word array
+				tags = new Tag(words)
+				.initial() // initial dictionary and pattern based tagging 
+				.tags;
+				
+				let regex = /NN/; // regex to match NN, NNP, NNPS
+				for(i=0;i<tags.length;i++){
+					if(regex.test(tags[i])){ // Noun
+						console.log(words[i]);		
+					}
+				}
 			});
-		});
-		review = obj.text.split(' ');
-		var tags = new Tag(review)
-		.initial() // initial dictionary and pattern based tagging 
-		.tags;
-		console.log(tags);
-	});
-	
+		});		
+	});	
 }
