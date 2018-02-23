@@ -9,8 +9,8 @@ export default function tag(reviewData){
 			sentences = obj.text.split('.'); //split review text into sentence array
 			sentences.forEach(function(sentence){
 				var analysis = emotional.get(sentence); //subjectivity and polarity analysis
-				console.log(sentence + ':\t');
-				console.log(analysis);
+				console.log(sentence);
+				console.log(analysis.subjectivity);
 				console.log('------------- Tagger output -----------------');
 				console.log(sentence);
 				words = sentence.split(' '); //word array
