@@ -12,7 +12,6 @@ export default function tag(reviewData){
 				console.log(sentence);
 				console.log(analysis.subjectivity);
 				console.log('------------- Tagger output -----------------');
-				console.log(sentence);
 				words = sentence.split(' '); //word array
 				tags = new Tag(words)
 				.initial() // initial dictionary and pattern based tagging 
