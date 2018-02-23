@@ -3,6 +3,8 @@ const Tag = require("en-pos").Tag;
 var emotional = require("emotional");
 
 export default function tag(reviewData){
+	console.log('-------------Crawler output -----------------');
+	console.log(reviewData);
 	reviewData.reviews.forEach(function(obj){
 		emotional.load(function () {
 			sentences = obj.text.split('.'); //split review text into sentence array
@@ -12,6 +14,7 @@ export default function tag(reviewData){
 				words = sentence.split(' '); //word array
 				tags = new Tag(words)
 				.initial() // initial dictionary and pattern based tagging 
+				.smooth() // further context based smoothing 
 				.tags;
 				
 				let regex = /NN/; // regex to match NN, NNP, NNPS
