@@ -10,7 +10,7 @@ export default function tag(reviewData){
 			sentences.forEach(function(sentence){
 				var analysis = emotional.get(sentence); //subjectivity and polarity analysis
 				console.log(sentence);
-				console.log(analysis.subjectivity);
+				console.log('subjectivity: ' + analysis.subjectivity);
 				console.log('------------- Tagger output -----------------');
 				words = sentence.split(' '); //word array
 				tags = new Tag(words)
