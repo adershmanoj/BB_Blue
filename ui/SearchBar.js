@@ -30,12 +30,10 @@ export default class SearchBar extends React.Component {
   
   render(){
     return (
-    <div>
+    <div className = 'search'>
       <form onSubmit={this.submitSearch.bind(this)}>
-        <label>
-          <input placeholder="Enter Amazon product link here" />
-          <button>Search</button>
-        </label>
+				<input placeholder="Enter Amazon product link here" />
+				<button>Summarize</button>
       </form>
       <p>
         {this.state.processing ? "Please wait..fetching results" : undefined}

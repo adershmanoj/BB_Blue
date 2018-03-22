@@ -16,7 +16,9 @@ Meteor.startup(() => {
   });
   
   Tracker.autorun(() => {
-    ReactDOM.render(<App/>, document.getElementById('app'));
+    ReactDOM.render(
+    <App/>,
+		document.getElementById('app'));
   });
 });
  
