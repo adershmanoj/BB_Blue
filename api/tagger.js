@@ -33,8 +33,9 @@ export default function tag(reviewData){
 					}
 				}
 			});
-			if(index === reviewData.reviews.length-1)
+			if(index === reviewData.reviews.length-1){
 				featureExtractor(nounList);
+      }
 		});		
 	});	
 }
