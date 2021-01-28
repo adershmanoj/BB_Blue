@@ -8,7 +8,7 @@
     "@babel/runtime": "^7.9.6",
     "amazon-reviews-crawler": "https://github.com/adershmanoj/amazon-reviews-crawler/tarball/master",
     "babel-runtime": "^6.26.0",
-    "electron": "^1.8.8",
+    "electron": "^9.4.0",
     "emotional": "0.0.3",
     "en-pos": "^1.0.16",
     "jquery": "^1.12.1",
